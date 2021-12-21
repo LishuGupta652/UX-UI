@@ -8,12 +8,14 @@ import ReactFibar from "./pages/ReactFibar";
 
 import { lightTheme, GlobalStyle } from "./globals/GlobalStyle";
 import NotFound from "./pages/NotFound";
+import Header from "./components/Header";
 
 function App() {
   return (
     <ThemeProvider theme={lightTheme}>
       <GlobalStyle />
       <BrowserRouter>
+        <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/fiber" element={<ReactFibar />} />
