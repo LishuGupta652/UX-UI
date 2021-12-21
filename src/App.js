@@ -15,7 +15,6 @@ function App() {
     <ThemeProvider theme={lightTheme}>
       <GlobalStyle />
       <BrowserRouter>
-        <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/fiber" element={<ReactFibar />} />
