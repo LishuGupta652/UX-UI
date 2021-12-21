@@ -5,7 +5,8 @@ const Homepage = styled.div`
   padding: 50px;
   max-width: 1200px;
   margin: 0 auto;
-  margin-top: 100px;
+  margin-top: 100pqx;
+  text-align: justify;
 `;
 
 const Home = () => {
