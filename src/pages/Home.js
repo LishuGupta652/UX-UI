@@ -20,9 +20,11 @@ const Homepage = styled.div`
   .home {
     h1 {
       font-size: 100px;
+      letter-spacing: 10px;
       span {
         font-size: 50px;
         color: #424242;
+        letter-spacing: 1px;
       }
     }
   }

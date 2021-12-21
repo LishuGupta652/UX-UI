@@ -4,6 +4,8 @@ import styled from "styled-components";
 
 const Nav = styled.nav`
   padding: 20px;
+  background: rgba(240, 240, 240, 0.8);
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.1);
 `;
 const Flex = styled.div`
   display: flex;
