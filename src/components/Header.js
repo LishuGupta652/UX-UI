@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Nav = styled.nav`
@@ -22,9 +23,13 @@ const Header = () => {
   return (
     <Nav>
       <Flex>
-        <h1>GITMAN STORE</h1>
+        <h1>
+          <Link to="/">GITMAN STORE</Link>
+        </h1>
         <ul>
-          <li>3d fiber</li>
+          <li>
+            <Link to="/fiber">3d Fiber</Link>
+          </li>
           <li>2d fiber</li>
         </ul>
       </Flex>
