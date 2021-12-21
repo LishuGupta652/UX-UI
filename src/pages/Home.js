@@ -5,16 +5,27 @@ import Header from "../components/Header";
 const Homepage = styled.div`
   padding: 50px;
   max-width: 1200px;
+  background-color: #706fd3;
   margin: 0 auto;
+  min-height: 100vh;
   margin-top: 100pqx;
   text-align: justify;
+
+  .home {
+    height: 500px;
+    text-transform: uppercase;
+    display: flex;
+    margin: 10px auto;
+  }
 `;
 
 const Home = () => {
   return (
     <Homepage>
       <Header />
-      <h1>homepage</h1>
+      <div className="home">
+        <h1>Homepage</h1>
+      </div>
     </Homepage>
   );
 };
