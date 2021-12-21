@@ -16,16 +16,30 @@ const Homepage = styled.div`
     display: flex;
     margin: 10px auto;
   }
+
+  .home {
+    h1 {
+      font-size: 100px;
+      span {
+        font-size: 50px;
+        color: #424242;
+      }
+    }
+  }
 `;
 
 const Home = () => {
   return (
-    <Homepage>
+    <>
       <Header />
-      <div className="home">
-        <h1>Homepage</h1>
-      </div>
-    </Homepage>
+      <Homepage>
+        <div className="home">
+          <h1>
+            01 <span>React fiber</span>
+          </h1>
+        </div>
+      </Homepage>
+    </>
   );
 };
 

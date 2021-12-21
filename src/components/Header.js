@@ -3,9 +3,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Nav = styled.nav`
-  background: #474787;
   padding: 20px;
-  color: white;
 `;
 const Flex = styled.div`
   display: flex;
