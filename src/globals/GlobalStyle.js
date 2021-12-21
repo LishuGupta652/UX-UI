@@ -21,8 +21,8 @@ html {
   --webkit-font-smoothing: antialiased;
 }
 a {
-  color: white;
   text-decoration: none;
+  color: inherit;
 }
 
     
