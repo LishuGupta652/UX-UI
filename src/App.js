@@ -1,19 +1,17 @@
 import "./App.css";
 
-import { ThemeProvider } from "styled-components";
+import { ThemeProvider, createGlobalStyle } from "styled-components";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import ReactFibar from "./pages/ReactFibar";
 
-const lightTheme = {
-  black: "#121212",
-  white: "#fff",
-};
+import { lightTheme, GlobalStyle } from "./globals/GlobalStyle";
 
 function App() {
   return (
     <ThemeProvider theme={lightTheme}>
+      <GlobalStyle />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />}>
