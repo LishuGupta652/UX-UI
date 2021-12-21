@@ -5,7 +5,6 @@ import Header from "../components/Header";
 const Homepage = styled.div`
   padding: 50px;
   max-width: 1200px;
-  background-color: #706fd3;
   margin: 0 auto;
   min-height: 100vh;
   margin-top: 100pqx;
