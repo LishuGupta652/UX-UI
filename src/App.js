@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import ReactFibar from "./pages/ReactFibar";
 
 import { lightTheme, GlobalStyle } from "./globals/GlobalStyle";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -14,9 +15,9 @@ function App() {
       <GlobalStyle />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />}>
-            <Route path="/fiber" element={<ReactFibar />} />
-          </Route>
+          <Route path="/" element={<Home />} />
+          <Route path="/fiber" element={<ReactFibar />} />
+          <Route path="/*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>
