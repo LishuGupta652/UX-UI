@@ -77,32 +77,18 @@ const Home = () => {
       <Homepage>
         <div className="home">
           <div className="link-container">
-            <Link to="/fiber">
+            <Link to="/markdown">
               <div className="flex-container">
                 <h1>
-                  01 <span>React fiber</span>
+                  01 <span>MarkDown editor</span>
                 </h1>
                 <div className="tag">
                   <ul>
-                    <li>3d</li>
+                    <li>markdown</li>
                     <li>awwwards</li>
                   </ul>
                 </div>
               </div>
-            </Link>
-          </div>
-          <div className="link-container">
-            <Link to="/fiber">
-              <h1>
-                02 <span>React UNKNOWN</span>
-              </h1>
-            </Link>
-          </div>
-          <div className="link-container">
-            <Link to="/fiber">
-              <h1>
-                03 <span>React VERSATILE</span>
-              </h1>
             </Link>
           </div>
         </div>
