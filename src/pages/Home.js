@@ -14,7 +14,7 @@ const Homepage = styled.div`
   .home {
     height: 500px;
     text-transform: uppercase;
-    display: flex;
+
     margin: 10px auto;
   }
 
@@ -29,6 +29,24 @@ const Homepage = styled.div`
         letter-spacing: 1px;
       }
     }
+
+    .flex-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      ul {
+        margin-right: 10px;
+        li {
+          padding: 2px 10px;
+          color: green;
+          font-size: 1.2rem;
+          border: 1px solid green;
+          border-radius: 5px;
+        }
+      }
+    }
+
     .link-container {
       width: 100%;
       height: fit-content;
@@ -52,8 +70,29 @@ const Home = () => {
         <div className="home">
           <div className="link-container">
             <Link to="/fiber">
+              <div className="flex-container">
+                <h1>
+                  01 <span>React fiber</span>
+                </h1>
+                <div className="tag">
+                  <ul>
+                    <li>3d</li>
+                  </ul>
+                </div>
+              </div>
+            </Link>
+          </div>
+          <div className="link-container">
+            <Link to="/fiber">
               <h1>
-                01 <span>React fiber</span>
+                02 <span>React fiber</span>
+              </h1>
+            </Link>
+          </div>
+          <div className="link-container">
+            <Link to="/fiber">
+              <h1>
+                03 <span>React fiber</span>
               </h1>
             </Link>
           </div>
