@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import reactMarkdown from "react-markdown";
+import ReactMarkdown from "react-markdown";
 import styled from "styled-components";
 
 const MarkdownStyle = styled.div`
@@ -20,16 +20,22 @@ const MarkdownStyle = styled.div`
 `;
 
 const MarkdownIndex = () => {
-  const [input, setInput] = useState();
+  const markdown = localStorage.getItem("markdown");
+  const [input, setInput] = useState(markdown || "# Try while typing...");
+
+  const handleInput = (e) => {
+    setInput(e.target.value);
+    localStorage.setItem("markdown", e.target.value);
+  };
   return (
     <MarkdownStyle>
       <textarea
         autoFocus
         value={input}
-        onChange={(e) => setInput(e.target.value)}
+        onChange={(e) => handleInput(e)}
         className="textarea"
       ></textarea>
-      <reactMarkdown source={input} className="markdown" />
+      <ReactMarkdown source={input} className="markdown" />
     </MarkdownStyle>
   );
 };
