@@ -28,9 +28,8 @@ const Header = () => {
         </h1>
         <ul>
           <li>
-            <Link to="/fiber">3d Fiber</Link>
+            <a href="https://www.lishu.ml">LISHU.ML</a>
           </li>
-          <li>2d fiber</li>
         </ul>
       </Flex>
     </Nav>

@@ -37,12 +37,20 @@ const Homepage = styled.div`
 
       ul {
         margin-right: 10px;
+        display: flex;
+        flex-wrap: wrap;
         li {
+          margin: 2px;
           padding: 2px 10px;
           color: green;
           font-size: 1.2rem;
           border: 1px solid green;
           border-radius: 5px;
+          transition: all 0.15s ease;
+        }
+        li:hover {
+          background-color: green;
+          color: white;
         }
       }
     }
@@ -77,6 +85,7 @@ const Home = () => {
                 <div className="tag">
                   <ul>
                     <li>3d</li>
+                    <li>awwwards</li>
                   </ul>
                 </div>
               </div>
@@ -85,14 +94,14 @@ const Home = () => {
           <div className="link-container">
             <Link to="/fiber">
               <h1>
-                02 <span>React fiber</span>
+                02 <span>React UNKNOWN</span>
               </h1>
             </Link>
           </div>
           <div className="link-container">
             <Link to="/fiber">
               <h1>
-                03 <span>React fiber</span>
+                03 <span>React VERSATILE</span>
               </h1>
             </Link>
           </div>
