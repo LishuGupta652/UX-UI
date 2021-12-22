@@ -4,10 +4,10 @@ import { ThemeProvider } from "styled-components";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
-import ReactFibar from "./pages/ReactFibar";
 
 import { lightTheme, GlobalStyle } from "./globals/GlobalStyle";
 import NotFound from "./pages/NotFound";
+import ReactFiber from "./pages/Fiber/ReactFiber";
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/fiber" element={<ReactFibar />} />
+          <Route path="/fiber" element={<ReactFiber />} />
           <Route path="/*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

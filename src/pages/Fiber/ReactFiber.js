@@ -1,7 +1,7 @@
 import React from "react";
 
-const ReactFibar = () => {
+const ReactFiber = () => {
   return <div>react fiber</div>;
 };
 
-export default ReactFibar;
+export default ReactFiber;
