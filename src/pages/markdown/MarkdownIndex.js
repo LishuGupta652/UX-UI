@@ -21,7 +21,10 @@ const MarkdownStyle = styled.div`
 
 const MarkdownIndex = () => {
   const markdown = localStorage.getItem("markdown");
-  const [input, setInput] = useState(markdown || "# Try while typing...");
+  const [input, setInput] = useState(
+    markdown ||
+      "# H1\n## H2\n### H3\n#### H4\n##### H5\n###### H6\nAlternatively, for H1 and H2, an underline-ish style:\nAlt-H1\n======\nAlt-H2\n------"
+  );
 
   const handleInput = (e) => {
     setInput(e.target.value);
@@ -35,7 +38,7 @@ const MarkdownIndex = () => {
         onChange={(e) => handleInput(e)}
         className="textarea"
       ></textarea>
-      <ReactMarkdown source={input} className="markdown" />
+      <ReactMarkdown children={input} className="markdown" />
     </MarkdownStyle>
   );
 };
