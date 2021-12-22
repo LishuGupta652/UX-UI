@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import ReactMarkdown from "react-markdown";
 import styled from "styled-components";
 
+import SyntaxHighlighter from "react-syntax-highlighter";
+import { docco } from "react-syntax-highlighter/dist/esm/styles/hljs";
+
 const MarkdownStyle = styled.div`
   display: flex;
   .textarea {
@@ -38,8 +41,23 @@ const MarkdownIndex = () => {
         onChange={(e) => handleInput(e)}
         className="textarea"
       ></textarea>
-      <ReactMarkdown children={input} className="markdown" />
+      <ReactMarkdown
+        children={input}
+        className="markdown"
+        renderers={{
+          code: Component,
+        }}
+      />
     </MarkdownStyle>
+  );
+};
+
+const Component = ({ value, language }) => {
+  const codeString = "(num) => num + 1";
+  return (
+    <SyntaxHighlighter language="javascript" style={docco}>
+      {codeString}
+    </SyntaxHighlighter>
   );
 };
 
