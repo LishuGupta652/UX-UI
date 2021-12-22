@@ -33,12 +33,13 @@ const Homepage = styled.div`
       width: 100%;
       height: fit-content;
       padding: 0 10px;
-      transition: all 0.2s;
+      transition: all 0.15s ease-in-out;
     }
 
     .link-container:hover {
       background-color: #f5f5f5;
       border-left: 5px solid red;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     }
   }
 `;
@@ -50,11 +51,11 @@ const Home = () => {
       <Homepage>
         <div className="home">
           <div className="link-container">
-            <h1>
-              <Link to="/fiber">
+            <Link to="/fiber">
+              <h1>
                 01 <span>React fiber</span>
-              </Link>
-            </h1>
+              </h1>
+            </Link>
           </div>
         </div>
       </Homepage>
