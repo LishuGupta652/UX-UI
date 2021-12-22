@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState, Suspense } from "react";
+import "./App.scss";
 //Components
 import Header from "./components/header";
 import { Section } from "./components/section";
@@ -67,8 +68,8 @@ const HTMLContent = ({
           <Model url={modelPath} />
         </mesh>
         <Html fullscreen portal={domContent}>
-          <div ref={refItem} className="container">
-            <h1 className="title">{children}</h1>
+          <div ref={refItem} className='container'>
+            <h1 className='title'>{children}</h1>
           </div>
         </Html>
       </group>
@@ -86,9 +87,9 @@ function Loader() {
   return transition(
     ({ progress, opacity }, active) =>
       active && (
-        <a.div className="loading" style={{ opacity }}>
-          <div className="loading-bar-container">
-            <a.div className="loading-bar" style={{ width: progress }}></a.div>
+        <a.div className='loading' style={{ opacity }}>
+          <div className='loading-bar-container'>
+            <a.div className='loading-bar' style={{ width: progress }}></a.div>
           </div>
         </a.div>
       )
@@ -109,36 +110,32 @@ export default function App() {
       <Canvas
         concurrent
         colorManagement
-        camera={{ position: [0, 0, 120], fov: 70 }}
-      >
+        camera={{ position: [0, 0, 120], fov: 70 }}>
         {/* Lights Component */}
         <Lights />
         <Suspense fallback={null}>
           <HTMLContent
             domContent={domContent}
-            bgColor="#f15946"
-            modelPath="/armchairYellow.gltf"
-            position={250}
-          >
+            bgColor='#f15946'
+            modelPath='/armchairYellow.gltf'
+            position={250}>
             <span>Meet the new </span>
             <span>shopping experience </span>
             <span>for online chairs</span>
           </HTMLContent>
           <HTMLContent
             domContent={domContent}
-            bgColor="#571ec1"
-            modelPath="/armchairGreen.gltf"
-            position={0}
-          >
+            bgColor='#571ec1'
+            modelPath='/armchairGreen.gltf'
+            position={0}>
             <span>Shit... we even</span>
             <span>got different colors</span>
           </HTMLContent>
           <HTMLContent
             domContent={domContent}
-            bgColor="#636567"
-            modelPath="/armchairGray.gltf"
-            position={-250}
-          >
+            bgColor='#636567'
+            modelPath='/armchairGray.gltf'
+            position={-250}>
             <span>And yes</span>
             <span>we even got</span>
             <span>monochrome!</span>
@@ -147,11 +144,10 @@ export default function App() {
       </Canvas>
       <Loader />
       <div
-        className="scrollArea"
+        className='scrollArea'
         ref={scrollArea}
         onScroll={onScroll}
-        {...events}
-      >
+        {...events}>
         <div style={{ position: "sticky", top: 0 }} ref={domContent} />
         <div style={{ height: `${state.pages * 100}vh` }} />
       </div>
